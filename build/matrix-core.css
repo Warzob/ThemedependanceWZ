@@ -1,0 +1,73 @@
+/* matrix-core.css */
+/* matrix-effects.css */
+/* DÃ©pendance pour les effets visuels Matrix rÃ©utilisables */
+
+/* Importer la police d'ecriture */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap'); /* Police rÃ©tro-futuriste */
+
+
+
+/* Variable pour activer/dÃ©sactiver les effets Matrix */
+:root {
+    --enable-matrix-effects: 1; /* 1 = activÃ©, 0 = dÃ©sactivÃ© */
+    --matrix-green: oklch(73% 0.2 160); /* Vert nÃ©on principal (dÃ©fini ici pour rÃ©utilisation) */
+}
+
+/* Effet de scanlines statiques en barres horizontales transparentes */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 6px, /* Espacement plus large */
+        rgba(0, 255, 170, 0.015) 6px, /* OpacitÃ© encore plus faible */
+        rgba(0, 255, 170, 0.015) 7px /* Ã‰paisseur de la ligne */
+    );
+    pointer-events: none !important;
+    z-index: 0 !important; /* DerriÃ¨re les Ã©lÃ©ments interactifs */
+    display: var(--enable-matrix-effects, 1) ? block : none; /* DÃ©sactivÃ© si --enable-matrix-effects = 0 */
+}
+
+/* Animation de vague pour les dÃ©gradÃ©s */
+@keyframes matrix-wave {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Animation de pulsation pour les notifications */
+@keyframes matrix-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); } /* Effet subtil */
+    100% { transform: scale(1); }
+}
+
+/* Appliquer l'animation wave uniquement sur certains Ã©lÃ©ments */
+div[class*="titleBar-"],
+div[class*="divider-"] {
+    animation: var(--enable-matrix-effects, 1) ? matrix-wave 6s infinite : none; /* DÃ©sactivÃ© si --enable-matrix-effects = 0 */
+}
+
+/* Appliquer l'animation pulse si les effets sont activÃ©s */
+.wrapper__2ea32:hover .unread__2ea32 {
+    animation: var(--enable-matrix-effects, 1) ? matrix-pulse 4s infinite : none; /* Ralentie Ã  4s */
+}
+
+/* Pseudo-Ã©lÃ©ment pour l'effet de vague sur les canaux */
+div[class*="channel-"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--matrix-green), transparent) !important;
+    z-index: -1 !important;
+    display: var(--enable-matrix-effects, 1) ? block : none; /* DÃ©sactivÃ© si --enable-matrix-effects = 0 */
+}
+
