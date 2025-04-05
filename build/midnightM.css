@@ -31,27 +31,6 @@ body {
     --gap: 12px; /* spacing between panels */
     --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
 
-     --animations: on;
-    --list-item-transition: 0.25s ease;
-    --dms-icon-svg-transition: 0.4s ease;
-    --move-top-bar-buttons: on;
-    --custom-app-top-bar-height: 32px;
-    --custom-window-controls: on;
-    --window-control-size: 14px;
-    --dms-icon: on;
-    --dms-icon-svg-url: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><text x="0" y="12" font-size="12" fill="%2300FFAA">0101</text></svg>');
-    --dms-icon-svg-size: 100%;
-    --dms-icon-color-before: var(--blue);
-    --dms-icon-color-after: var(--red);
-    --dms-background: color;
-    --dms-background-color: transparent;
-    --transparency-tweaks: on;
-    --remove-bg-layer: on;
-    --panel-blur: off;
-    --bg-floating: rgba(0, 0, 0, 0.6);
-    --flipped-chatbar: on;
-    --chatbar-height: 47px;
-
 
 
     --customEmojiIconURL: url('https://cdn.discordapp.com/emojis/1217110775601172591.gif?size=240&quality=lossless');
