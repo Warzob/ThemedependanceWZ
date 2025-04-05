@@ -1,3 +1,14 @@
+ * * ᅳᅳᅳᅳᅳᅳᅳᅳ|@name MatrixMidnight - 𝑪𝒐𝒅𝒆 𝑭u𝒍𝒍 𝑬𝒅𝒊𝒕𝒊𝒐𝒏  |
+ * * | ᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳᅳ |
+ * * | [SYSTEM INITIATED] :: LOADING MATRIX PROTOCOLS... |
+ * * | [0101] :: GREEN CODE CASCADE ENABLED              |
+ * * | [DEBUG] :: VERSION 2.9.8 - WARZOB EDITION         |
+ * * | [ACCESS] :: ENTER THE MATRIX - CODE FALL ACTIVE   |
+ * * |___________________________________________________|
+ */
+
+
+
 /* main.css */
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -42,10 +53,12 @@ body {
     --chatbar-height: 47px;
     --chatbar-padding: 8px;
     --small-user-panel: off;
+
+
     --showNitroButton: none;
     --showInboxButton: block;
     --customEmojiIconURL: url('https://cdn.discordapp.com/emojis/1217110775601172591.gif?size=240&quality=lossless');
-    --customEmojiIconMask: ur
+    --customEmojiIconMask: url('https://cdn.discordapp.com/emojis/1217110775601172591.gif?size=240&quality=lossless');
 
 
 
