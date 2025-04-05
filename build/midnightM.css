@@ -1556,49 +1556,27 @@ body {
 
 
 
-/* Injecter le script JS pour lâ€™effet Matrix */
-body::after {
-    content: '';
-    display: none; /* On cache lâ€™Ã©lÃ©ment, il sert juste Ã  exÃ©cuter le JS */
-    --inject-js: url("data:text/javascript;base64," + btoa(`
-        (function() {
-            if (window.matrixEffectLoaded) return;
-            window.matrixEffectLoaded = true;
 
-            const canvas = document.createElement('canvas');
-            canvas.style.position = 'fixed';
-            canvas.style.top = '0';
-            canvas.style.left = '0';
-            canvas.style.width = '100%';
-            canvas.style.height = '100%';
-            canvas.style.pointerEvents = 'none';
-            canvas.style.zIndex = '-1';
-            document.body.appendChild(canvas);
-
-            const ctx = canvas.getContext('2d');
-            canvas.height = window.innerHeight;
-            canvas.width = window.innerWidth;
-
-            const fontSize = 14;
-            const columns = canvas.width / fontSize;
-            const drops = Array(Math.floor(columns)).fill(1);
-            const chars = '01ã‚¢ã‚£ã‚¦ã‚§ã‚ªã‚«ã‚­ã‚¯ã‚±ã‚³ã‚µã‚·ã‚¹ã‚»ã‚½ã‚¿ãƒãƒ„ãƒ†ãƒˆãƒŠãƒ‹ãƒŒãƒãƒŽãƒãƒ’ãƒ•ãƒ˜ãƒ›ãƒžãƒŸãƒ ãƒ¡ãƒ¢ãƒ¤ãƒ¦ãƒ¨ãƒ©ãƒªãƒ«ãƒ¬ãƒ­ãƒ¯ãƒ²ãƒ³';
-
-            function draw() {
-                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-                ctx.font = \`\${fontSize}px monospace\`;
-                ctx.fillStyle = '#00ffaa';
-                for (let i = 0; i < drops.length; i++) {
-                    const text = chars.charAt(Math.floor(Math.random() * chars.length));
-                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-                    drops[i] += 0.8;
-                }
-                setTimeout(() => requestAnimationFrame(draw), 33);
-            }
-
-            draw();
-        })();
-    `));
+/* Masquer le bouton Nitro */
+button:has([d^=' M-7,10 C-8' i]) {
+    display: var(--showNitroButton);
 }
+
+/* Icônes de dossier et séparateurs */
+.expandedFolderIconWrapper__48112 svg {
+    width: 26px;
+    height: 26px;
+    margin: 20px 5px 20px;
+    transition: transform 0.15s ease-in-out;
+    transform-origin: center;
+}
+.expandedFolderIconWrapper__48112:hover svg {
+    transform: scale(0.9);
+}
+.visual-refresh .guildSeparator__252b6 {
+    width: 40px;
+    background-color: oklch(76% 0.1 215);
+    margin: 0.38px;
+}
+
+
