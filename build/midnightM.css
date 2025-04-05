@@ -1555,28 +1555,3 @@ body {
 
 
 
-
-
-/* Masquer le bouton Nitro */
-button:has([d^=' M-7,10 C-8' i]) {
-    display: var(--showNitroButton);
-}
-
-/* Icônes de dossier et séparateurs */
-.expandedFolderIconWrapper__48112 svg {
-    width: 26px;
-    height: 26px;
-    margin: 20px 5px 20px;
-    transition: transform 0.15s ease-in-out;
-    transform-origin: center;
-}
-.expandedFolderIconWrapper__48112:hover svg {
-    transform: scale(0.9);
-}
-.visual-refresh .guildSeparator__252b6 {
-    width: 40px;
-    background-color: oklch(76% 0.1 215);
-    margin: 0.38px;
-}
-
-
