@@ -11,7 +11,7 @@ body {
     container-name: body;
 
     /* font, change to '' for default discord font */
-    --font: 'figtree';
+    --font: 'IBM Plex Mono', monospace; /* Police terminal avec fallback */
 
     /* sizes */
     --gap: 12px; /* spacing between panels */
