@@ -56,7 +56,7 @@ body {
         grid-template-rows: [top] var(--custom-app-top-bar-height) [titleBarEnd] min-content [noticeEnd] 1fr [contentEnd] min-content [end];
         grid-template-areas:
             'titleBar titleBar titleBar'
-            'inbox guildsList notice notice'
+            'guildsList notice notice'
             'guildsList channelsList page'
             'userPanel userPanel page';
         gap: 0 var(--gap);
