@@ -55,8 +55,7 @@ body {
     --small-user-panel: off;
 
 
-    --showNitroButton: none;
-    --showInboxButton: block;
+
     --customEmojiIconURL: url('https://cdn.discordapp.com/emojis/1217110775601172591.gif?size=240&quality=lossless');
     --customEmojiIconMask: url('https://cdn.discordapp.com/emojis/1217110775601172591.gif?size=240&quality=lossless');
 
