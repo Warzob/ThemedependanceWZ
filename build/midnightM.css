@@ -16,7 +16,13 @@ body {
     --font: 'IBM Plex Mono', monospace; /* Police terminal avec fallback */
     --corner-text: 'MATRIX';
 
-
+    --animations: on;
+    --list-item-transition: 0.25s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+    --move-top-bar-buttons: on;
+    --custom-app-top-bar-height: 32px;
+    --custom-window-controls: on;
+    --window-control-size: 14px;
 
     /* sizes */
     --gap: 12px; /* spacing between panels */
