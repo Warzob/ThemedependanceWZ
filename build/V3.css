@@ -1119,7 +1119,7 @@ body {
     --dms-icon-color-before: var(--icon-secondary);
     --dms-icon-color-after: var(--white);
     --dms-background-image-url: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png');
-    --dms-background-image-size: cover; /* size of the background image (css background-size) */
+    --dms-background-image-size: transparent; /* size of the background image (css background-size) */
     --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* color of the background image (css background) */
 }
 
