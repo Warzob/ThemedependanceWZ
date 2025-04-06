@@ -1403,7 +1403,7 @@ body {
             transition: background-color 0.15s ease-out;
 
             &:hover {
-                background-color: var(--bg-brand);
+                background-color: transparent;
 
                 .icon__9293f {
                     color: var(--white);
