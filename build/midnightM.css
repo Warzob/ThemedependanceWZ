@@ -1458,6 +1458,17 @@ body {
         .recentsIcon_c99c29:hover .iconBadge__9293f {
             background: var(--white);
         }
+        
+        .recentMentionsPopout__95796 {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 20001;
+            width: 350px;
+            max-height: 800px;
+            overflow-y: auto;
+            border: 1px solid blue;
+        }
     }
 }
 
