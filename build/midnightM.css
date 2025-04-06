@@ -1398,7 +1398,7 @@ body {
         .recentsIcon_c99c29 .button__85643 {
             width: 100%;
             height: 100%;
-            background-color: var(--background-surface-higher);
+            background-color: transparent;
             border-radius: var(--radius-md);
             transition: background-color 0.15s ease-out;
 
