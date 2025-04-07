@@ -1480,28 +1480,25 @@ body {
             transition: background 0.15s ease-out;
         }
 
-        .recentsIcon_c99c29:hover .iconBadge__9293f {
-            background: var(--white);
-        }
-           .visual-refresh {
+        .recentsIcon_c99c29:hover .iconBadge__9293f {background: var(--white);
+}
+        .visual-refresh {
         .vc-betterFolders-sidebar-grid {
-            grid-template-columns: [start] min-content [guildsEnd] min-content [sidebarEnd] min-content [channelsEnd] 1fr [end];
-            grid-template-areas:
-                'titleBar titleBar titleBar titleBar'
-                'guildsList betterFoldersSidebar notice notice'
-                'guildsList betterFoldersSidebar channelsList page'
-                'userPanel userPanel userPanel page';
-            .sidebarList_c48ade {
-                width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) - var(--gap));
-            }
-            .sidebar_c48ade:not(:has(:nth-child(2) > [aria-label='Servers sidebar'])) {
-                column-gap: 0;
-            }
-            .panels_c48ade {
-                max-width: calc(var(--custom-guild-sidebar-width) + 2 * var(--gap) + 4px + 66px);
-            }
+        grid-template-columns: [start] min-content [guildsEnd] min-content [sidebarEnd] min-content [channelsEnd] 1fr [end];
+        grid-template-areas:
+            'titleBar titleBar titleBar titleBar'
+            'guildsList betterFoldersSidebar notice notice'
+            'guildsList betterFoldersSidebar channelsList page'
+            'userPanel userPanel userPanel page';
+        .sidebarList_c48ade {
+            width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) - var(--gap));
         }
-    }
+        .sidebar_c48ade:not(:has(:nth-child(2) > [aria-label='Servers sidebar'])) {
+            column-gap: 0;
+        }
+        .panels_c48ade {max-width: calc(var(--custom-guild-sidebar-width) + 2 * var(--gap) + 4px + 66px);}
+        }
+    
 
     }
 }
