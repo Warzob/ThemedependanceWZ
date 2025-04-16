@@ -1,1 +1,1 @@
-Dependance for my theme 
+the import for my theme 
