@@ -39,7 +39,7 @@
     --online: var(--green-2); /* change to #43a25a for default */
     --dnd: var(--red-2); /* change to #d83a42 for default */
     --idle: var(--yellow-2); /* change to #ca9654 for default */
-    --streaming: var(--purple-2); /* change to #593695 for default */
+    --streaming: var(--purple-2); /* change to ##9147ff for default */
     --offline: var(--text-4); /* change to #83838b for default offline color */
 
     /* border colors */
@@ -81,8 +81,8 @@
 
 @container root style(--colors: on) {
     .visual-refresh body,
-    .visual-refresh .theme-dark,
-    .visual-refresh .theme-light:not(.custom-profile-theme) {
+    .visual-refresh .theme-dark:not(.custom-user-profile-theme),
+    .visual-refresh .theme-light:not(.custom-user-profile-theme) {
         --activity-card-background: red;
         --alert-bg: red;
         --autocomplete-bg: var(--bg-3);
@@ -106,9 +106,9 @@
         --bg-base-primary: var(--bg-4); /* screenshare window? */
         --bg-base-secondary: var(--bg-4);
         --bg-base-tertiary: var(--bg-3);
-        --background-mod-subtle: var(--bg-3);
-        --background-mod-normal: var(--bg-3);
-        --background-mod-strong: var(--bg-3);
+        --background-mod-subtle: var(--hover);
+        --background-mod-normal: var(--active);
+        --background-mod-strong: var(--active-2);
         --background-base-low: var(--bg-4);
         --background-base-lower: var(--bg-4);
         --background-base-lowest: var(--bg-4);
@@ -257,6 +257,9 @@
         --text-feedback-info: red;
         --text-feedback-warning: red;
         --text-tertiary: var(--text-4);
+
+        --user-profile-overlay-background: var(--bg-4);
+        --user-profile-overlay-background-hover: var(--bg-2);
 
         --status-danger: var(--red-2);
         --status-danger-background: var(--red-3);
@@ -569,7 +572,7 @@
         }
 
         /* status indicators */
-        rect[fill='#83838b'] {
+        rect[fill='#82838b'] {
             fill: var(--offline);
         }
         .status_a423bd[style='background-color: rgb(131, 131, 139);'] {
@@ -577,6 +580,7 @@
         }
         rect[fill='#40a258'],
         path[fill='#40a258'] /* status activity icon */,
+        path[fill='var(--status-positive)'] /* status activity icon */,
         .vc-platform-indicator > svg[fill="#43a25a"] {
             fill: var(--online);
         }
@@ -619,10 +623,14 @@
             --vc-spotify-green: var(--accent-2);
         }
 
-        ::selection,
-        .highlight {
-            background: var(--accent-3);
+        .vcd-screen-picker-option-radio[data-checked='true'] .defaultColor__4bd52 {
             color: var(--text-0);
         }
+    }
+
+    ::selection,
+    .highlight {
+        background: var(--accent-3);
+        color: var(--text-0);
     }
 }
