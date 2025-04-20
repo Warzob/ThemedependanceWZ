@@ -53,7 +53,7 @@ body {
 
 @property --custom-dms-background {
     syntax: 'off | image | color';
-    inherits: false;
+    inherits: true;
     initial-value: off;
 }
 
