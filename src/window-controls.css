@@ -1,11 +1,11 @@
-@property --custom-window-controls {
-    syntax: 'on | off';
-    inherits: false;
-    initial-value: off;
-}
-
 body {
     --window-control-size: 14px;
+}
+
+@property --custom-window-controls {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: on;
 }
 
 @container body style(--custom-window-controls: on) {
@@ -45,5 +45,17 @@ body {
     }
     .winButtonMinMax_c38106:nth-child(2)::after {
         background-color: var(--online) !important;
+    }
+}
+
+@container body style(--custom-window-controls: off) and style(--top-bar-button-position: titlebar) {
+    .visual-refresh {
+        .winButton_c38106 {
+            width: 28px;
+            height: 28px;
+        }
+        .toolbar__9293f {
+            padding-right: calc(32px + 3 * var(--space-xs) + 3 * 32px);
+        }
     }
 }
