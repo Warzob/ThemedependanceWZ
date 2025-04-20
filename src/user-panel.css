@@ -1,18 +1,55 @@
-@property --small-user-panel {
-    syntax: 'on | off';
+@property --panel-blur {
+    syntax: 'off | on';
     inherits: false;
     initial-value: off;
 }
 
-@container body style(--small-user-panel: on) {
+@container body style(--panel-blur: on) {
     .visual-refresh {
-        .panels_c48ade /* user panel */ {
-            right: 0;
-            left: unset;
-            width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width));
+        #app-mount {
+            --panel-backdrop-filter: blur(var(--blur-amount));
         }
-        .guilds_c48ade /* server list */ {
-            margin-bottom: 0;
+
+        .popoverReactionHoverBar_f84418 /* message hover quick action bar */,
+        .tooltip__382e7 /* tooltips */ {
+            background: var(--bg-floating);
         }
+        .menu_c1e9c4 /* context menus */,
+        .contentWrapper__08434 /* emoji/gif panel */,
+        .root__49fc1 /* modals like invite */,
+        .outer_c0bea0.biteSize_c0bea0:not(.custom-theme-background) /* small profile popup */,
+        .autocomplete__6b0e0 /* autocomplete */,
+        .container__55c99 /* search suggestions */,
+        .messagesPopoutWrap__45690 /* inbox */,
+        .popout__76f04 /* channel hover popout */ {
+            background: var(--bg-floating);
+        }
+    }
+}
+
+@property --transparency-tweaks {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: off;
+}
+
+@container body style(--transparency-tweaks: on) {
+    .visual-refresh {
+        .formWithLoadedChatInput_f75fb0:before,
+        .children__9293f:after {
+            display: none;
+        }
+    }
+}
+
+@property --remove-bg-layer {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: off;
+}
+
+@container body style(--remove-bg-layer: on) {
+    .bg__960e4 {
+        background: transparent !important;
     }
 }
