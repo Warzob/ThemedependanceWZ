@@ -370,9 +370,7 @@
         .mentioned__5126c:before /* mention message left edge */ {
             background-color: var(--accent-2) !important;
         }
-        .replying__5126c:before /* reply message left edge */ {
-            background-color: var(--text-2) !important;
-        }
+        .replying__5126c:before /* reply message left edge */ {background-color: var(--text-2) !important;}
 
         #app-mount .message__5126c.replying__5126c:hover /* override fix for message reply hover */ {
             background: var(--reply-hover);
@@ -382,19 +380,12 @@
             color: var(--accent-2);
         }
 
-        .ephemeral__5126c /* ephemeral messages */ {
-            background: var(--mention) !important;
-        }
-        .ephemeral__5126c:hover {
-            background: var(--mention-hover) !important;
-        }
+        .ephemeral__5126c /* ephemeral messages */ {background: var(--mention) !important;}
+        .ephemeral__5126c:hover {background: var(--mention-hover) !important;}
 
-        .botTagRegular__82f07 /* bot tag */ {
-            background-color: var(--accent-2);
-        }
-        .botTagOP__82f07 /* forum post op tag */ {
-            color: var(--text-0);
-        }
+        .botTagRegular__82f07 /* bot tag */ {background-color: var(--accent-2);}
+        
+        .botTagOP__82f07 /* forum post op tag */ {color: var(--text-0);}
 
         .container__87bf1 /* settings checkbutton background */ {
             background-color: var(--bg-1) !important;
