@@ -33,9 +33,8 @@ body {
             scrollbar-width: none;
         }
         /* create space for inbox button */
-        .tutorialContainer__1f388 {
-            margin-bottom: 48px;
-        }
+        .tutorialContainer__1f388 {margin-bottom: 48px;}
+        
         /* move inbox button */
         .recentsIcon_c99c29 {
             position: fixed;
@@ -52,30 +51,21 @@ body {
             border-radius: var(--radius-md);
             transition: background-color 0.15s ease-out;
 
-            &:hover {
-                background-color: var(--bg-brand);
-
-                .icon__9293f {
-                    color: var(--white);
-                }
-            }
+            &:hover {background-color: var(--bg-brand);.icon__9293f {color: var(--white);}}
         }
+        
         .recentsIcon_c99c29 .svg__2338f {
             transition: color 0.15s ease-out;
             width: 24px;
             height: 24px;
         }
         /* shift inbox popup panel into view */
-        .recentMentionsPopout__95796 {
-            transform: translateX(100%);
-        }
+        .recentMentionsPopout__95796 {transform: translateX(100%);}
+        
         /* fix settings animation transform */
-        .layer__960e4.baseLayer__960e4 {
-            transform: none !important;
-        }
-        .layers__960e4 > .layer__960e4.animating__960e4 {
-            will-change: opacity;
-        }
+        .layer__960e4.baseLayer__960e4 {transform: none !important;}
+        
+        .layers__960e4 > .layer__960e4.animating__960e4 {will-change: opacity;}
 
         /* unread icon */
         .recentsIcon_c99c29 .iconBadge__9293f {
@@ -85,9 +75,7 @@ body {
             transition: background 0.15s ease-out;
         }
 
-        .recentsIcon_c99c29:hover .iconBadge__9293f {
-            background: var(--white);
-        }
+        .recentsIcon_c99c29:hover .iconBadge__9293f {background: var(--white);}
     }
 }
 
