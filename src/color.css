@@ -337,7 +337,6 @@
         }
 
         .panel__5dec7 /* game activity panel */,
-        #vc-spotify-player /* vencord spotify plugin */,
         .container__722ff /* background between vc and vc chat */ {
             background: none;
         }
@@ -370,7 +369,9 @@
         .mentioned__5126c:before /* mention message left edge */ {
             background-color: var(--accent-2) !important;
         }
-        .replying__5126c:before /* reply message left edge */ {background-color: var(--text-2) !important;}
+        .replying__5126c:before /* reply message left edge */ {
+            background-color: var(--text-2) !important;
+        }
 
         #app-mount .message__5126c.replying__5126c:hover /* override fix for message reply hover */ {
             background: var(--reply-hover);
@@ -380,12 +381,19 @@
             color: var(--accent-2);
         }
 
-        .ephemeral__5126c /* ephemeral messages */ {background: var(--mention) !important;}
-        .ephemeral__5126c:hover {background: var(--mention-hover) !important;}
+        .ephemeral__5126c /* ephemeral messages */ {
+            background: var(--mention) !important;
+        }
+        .ephemeral__5126c:hover {
+            background: var(--mention-hover) !important;
+        }
 
-        .botTagRegular__82f07 /* bot tag */ {background-color: var(--accent-2);}
-        
-        .botTagOP__82f07 /* forum post op tag */ {color: var(--text-0);}
+        .botTagRegular__82f07 /* bot tag */ {
+            background-color: var(--accent-2);
+        }
+        .botTagOP__82f07 /* forum post op tag */ {
+            color: var(--text-0);
+        }
 
         .container__87bf1 /* settings checkbutton background */ {
             background-color: var(--bg-1) !important;
@@ -589,22 +597,37 @@
         .vc-platform-indicator > svg[fill='#d83a41'] {
             fill: var(--dnd);
         }
-        .status_a423bd[style='background-color: rgb(216, 58, 65);'] {background-color: var(--dnd) !important;}
-        
-        rect[fill='#9147ff'] {fill: var(--streaming);}
-        
-        div[style='display: flex; justify-content: center; align-items: center; border-radius: 5px; background-color: rgb(67, 162, 90); height: 10px; width: 25px;'] {background-color: var(--online) !important;}
+        .status_a423bd[style='background-color: rgb(216, 58, 65);'] {
+            background-color: var(--dnd) !important;
+        }
+        rect[fill='#9147ff'] {
+            fill: var(--streaming);
+        }
+        div[style='display: flex; justify-content: center; align-items: center; border-radius: 5px; background-color: rgb(67, 162, 90); height: 10px; width: 25px;'] {
+            background-color: var(--online) !important;
+        }
 
         /* fix radio bar button colors */
-        .radioBar__001a7[style='--radio-bar-accent-color: var(--yellow-360); padding: 10px;'] {--radio-bar-accent-color: var(--yellow-2) !important;}
-        
-        .radioBar__001a7[style='--radio-bar-accent-color: var(--green-360); padding: 10px;'] {--radio-bar-accent-color: var(--green-2) !important;}
-        
-        .radioBar__001a7[style='--radio-bar-accent-color: var(--red-400); padding: 10px;'] {--radio-bar-accent-color: var(--red-2) !important;}
+        .radioBar__001a7[style='--radio-bar-accent-color: var(--yellow-360); padding: 10px;'] {
+            --radio-bar-accent-color: var(--yellow-2) !important;
+        }
+        .radioBar__001a7[style='--radio-bar-accent-color: var(--green-360); padding: 10px;'] {
+            --radio-bar-accent-color: var(--green-2) !important;
+        }
+        .radioBar__001a7[style='--radio-bar-accent-color: var(--red-400); padding: 10px;'] {
+            --radio-bar-accent-color: var(--red-2) !important;
+        }
 
-        #vc-spotify-player {--vc-spotify-green: var(--accent-2);}
+        #vc-spotify-player {
+            --vc-spotify-green: var(--accent-2);
+        }
+        .barFill_a562c8 {
+            background-color: var(--accent-2) !important;
+        }
 
-        .vcd-screen-picker-option-radio[data-checked='true'] .defaultColor__4bd52 {color: var(--text-0);}
+        .vcd-screen-picker-option-radio[data-checked='true'] .defaultColor__4bd52 {
+            color: var(--text-0);
+        }
     }
 
     ::selection,
