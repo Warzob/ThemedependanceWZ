@@ -61,6 +61,7 @@ body {
         bottom: 0;
         left: 0;
         width: 100%;
+        overflow: hidden;
     }
 
     .sidebar_c48ade /* server list + channel list + user panel group */ {
@@ -152,8 +153,13 @@ body {
         margin-bottom: 0;
     }
 
-    .chatContent_f75fb0 /* chat */ {
-        overflow: hidden;
+    .content_f75fb0 /* chat outer */,
+    .tabBody__133bf /* friends page */ {
+        border: none !important;
+    }
+
+    .listeningAlong_e0cf27 /* user panel listening along */ {
+        border-top: none !important;
     }
 
     .container_c8ffbb /* member list */ {
@@ -313,12 +319,8 @@ body {
         padding: calc(var(--custom-guild-list-padding) / 2);
     }
 
-    /* jank ass solution to only apply padding to treatment 3 */
-    .form_f75fb0 /* chat bar outer form */ {
-        --space-8: 16px;
-    }
-    .channelBottomBarArea_f75fb0 /* chat bar inner */ {
-        --space-8: 8px;
+    #vc-spotify-player /* vencord spotify plugin */ {
+        background: none;
     }
 
     /* general chat bar improvements */
