@@ -23,7 +23,9 @@ body {
     .visual-refresh {
         /* remove help button */
         .trailing_c38106 > a[href="https://support.discord.com"],
-        .winButtons_c38106::before {display: none;}
+        .winButtons_c38106::before {
+            display: none;
+        }
 
         /* make server list inner scroll */
         .stack_dbd263 {
@@ -31,8 +33,9 @@ body {
             scrollbar-width: none;
         }
         /* create space for inbox button */
-        .tutorialContainer__1f388 {margin-bottom: 48px;}
-        
+        .tutorialContainer__1f388 {
+            margin-bottom: 48px;
+        }
         /* move inbox button */
         .recentsIcon_c99c29 {
             position: fixed;
@@ -49,21 +52,30 @@ body {
             border-radius: var(--radius-md);
             transition: background-color 0.15s ease-out;
 
-            &:hover {background-color: var(--bg-brand);.icon__9293f {color: var(--white);}}
+            &:hover {
+                background-color: var(--bg-brand);
+
+                .icon__9293f {
+                    color: var(--white);
+                }
+            }
         }
-        
         .recentsIcon_c99c29 .svg__2338f {
             transition: color 0.15s ease-out;
             width: 24px;
             height: 24px;
         }
         /* shift inbox popup panel into view */
-        .recentMentionsPopout__95796 {transform: translateX(100%);}
-        
+        .recentMentionsPopout__95796 {
+            transform: translateX(100%);
+        }
         /* fix settings animation transform */
-        .layer__960e4.baseLayer__960e4 {transform: none !important;}
-        
-        .layers__960e4 > .layer__960e4.animating__960e4 {will-change: opacity;}
+        .layer__960e4.baseLayer__960e4 {
+            transform: none !important;
+        }
+        .layers__960e4 > .layer__960e4.animating__960e4 {
+            will-change: opacity;
+        }
 
         /* unread icon */
         .recentsIcon_c99c29 .iconBadge__9293f {
@@ -73,7 +85,9 @@ body {
             transition: background 0.15s ease-out;
         }
 
-        .recentsIcon_c99c29:hover .iconBadge__9293f {background: var(--white);}
+        .recentsIcon_c99c29:hover .iconBadge__9293f {
+            background: var(--white);
+        }
     }
 }
 
@@ -84,35 +98,53 @@ body {
         }
         .title_c38106, 
         .trailing_c38106 > a[href="https://support.discord.com"]
-        {display: none;}
-
+        {
+            display: none;
+        }
+        .recentsIcon_c99c29 {
+            margin-right: var(--space-xs);
+        }
         .trailing_c38106 {
             position: absolute;
             top: calc(var(--gap) + 8px + var(--border-thickness));
             right: var(--gap);
-            gap: var(--space-xs);
-            z-index: 10000;
+            gap: 0;
+            z-index: 1000;
+            padding-right: var(--space-xs);
         }
-        .systemBar_c38106 .trailing_c38106 {top: var(--gap);}
-
-        .winButtons_c38106 {padding-right: var(--space-xs);}
-        
+        .systemBar_c38106 .trailing_c38106 {
+            top: var(--gap);
+        }
+        .winButtons_c38106 {
+            padding: 0;
+        }
         .winButtons_c38106::before {
             height: 16px;
             width: var(--space-xs);
             box-sizing: border-box;
             margin: 0;
         }
-        .toolbar__9293f {padding-right: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));}
-        
-        .inviteToolbar__133bf {padding-right: 0;}
-
+        .toolbar__9293f {
+            padding-right: calc(32px + 2 * var(--space-xs));
+        }
+        .searchBar__1ac1c {
+            margin-right: calc(32px + 2 * var(--space-xs));
+        }
+        .inviteToolbar__133bf {
+            padding-right: 0;
+        }
         .base_c48ade:has(.notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
             top: calc(var(--gap) + 8px + 40px + var(--gap) + var(--border-thickness));
         }
-        .layerContainer_da8173 /* image preview */ {z-index: 10001;}
-
-        .container_a2f514 /* loading screen */ {z-index: 10001;}
+        .chat_f75fb0 > .layerContainer_da8173 {
+            z-index: 999;
+        }
+    }
+    .base_c48ade:has(.winButtons_c38106) .toolbar__9293f {
+        padding-right: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));
+    }
+    .base_c48ade:has(.winButtons_c38106) .searchBar__1ac1c {
+        margin-right: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));
     }
 }
 
@@ -124,7 +156,9 @@ body {
 
 @container body style(--top-bar-title-position: hide) {
     .visual-refresh {
-        .title__85643 {display: none;}
+        .title__85643 {
+            display: none;
+        }
     }
 }
 
@@ -134,7 +168,9 @@ body {
             padding-left: var(--gap);
             justify-content: flex-start;
         }
-        .title__85643 {gap: 4px;}
+        .title__85643 {
+            gap: 4px;
+        }
     }
 }
 
