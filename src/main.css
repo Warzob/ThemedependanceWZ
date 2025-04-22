@@ -4,6 +4,8 @@
     container-name: root;
     --custom-guild-list-padding: 12px;
     --panel-backdrop-filter: none;
+
+    --border-hover: var(--border-subtle);
 }
 
 body {
@@ -11,12 +13,15 @@ body {
 
     /* font, change to '' for default discord font */
     --font: 'figtree';
+    --code-font: '';
 
     /* sizes */
     --gap: 12px; /* spacing between panels */
     --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
     --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
     --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + var(--border-thickness) * 2);
+
+    --border-hover-transition: 0.2s ease;
 }
 
 .visual-refresh {
@@ -55,6 +60,11 @@ body {
         border: var(--border-thickness) solid var(--border-subtle);
         backdrop-filter: var(--panel-backdrop-filter);
         box-sizing: border-box;
+        transition: border-color var(--border-hover-transition);
+
+        &:hover {
+            border-color: var(--border-hover);
+        }
     }
 
     .panels_c48ade /* user panel */ {
@@ -235,6 +245,7 @@ body {
         margin: 0 var(--gap) var(--gap) 0;
         border-radius: var(--radius-md);
         box-sizing: border-box;
+        height: 40px;
     }
 
     .container__01ae2 /* vc chat + titlebar group */ {
@@ -424,6 +435,7 @@ body {
 body {
     --font-primary: var(--font), 'gg sans';
     --font-display: var(--font), 'gg sans';
+    --font-code: var(--code-font), 'gg mono';
 }
 
 [class*='scroll'] {
