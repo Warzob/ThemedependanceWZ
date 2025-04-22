@@ -80,6 +80,11 @@ body {
             border-radius: var(--radius-lg);
             border: var(--border-thickness) solid var(--border-subtle);
             backdrop-filter: var(--panel-backdrop-filter);
+            transition: border-color var(--border-hover-transition);
+
+            &:hover {
+                border-color: var(--border-hover);
+            }
         }
         .scrollerSpacer__36d07 {
             height: calc(26px + var(--space-xs));
@@ -87,7 +92,7 @@ body {
         .scroller__36d07::-webkit-scrollbar-track {
             margin-bottom: calc(26px);
         }
-        .chatContent_f75fb0:has(.typing_b88801) .messagesWrapper__36d07::after {
+        .chatContent_f75fb0:has(.typing_b88801) .messagesWrapper__36d07::before {
             content: '';
             position: absolute;
             bottom: 0;
@@ -96,7 +101,7 @@ body {
             background: var(--background-base-lower);
             height: 26px;
             border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-            z-index: 1;
+            z-index: 2;
         }
         .form_f75fb0 {
             display: flex;
@@ -123,6 +128,11 @@ body {
             border-radius: var(--radius-lg);
             border: var(--border-thickness) solid var(--border-subtle);
             backdrop-filter: var(--panel-backdrop-filter);
+            transition: border-color var(--border-hover-transition);
+
+            &:hover {
+                border-color: var(--border-hover);
+            }
         }
         .stackedBars__74017 {
             background: none !important;
