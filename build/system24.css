@@ -23,12 +23,7 @@ body {
     --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + var(--border-thickness) * 2);
 
     --border-hover-transition: 0.2s ease;
-
-
 }
-
-
-
 
 :root {
     container-name: root;
@@ -36,8 +31,6 @@ body {
     --panel-backdrop-filter: none;
     --border-hover: var(--border-subtle);
 }
-
-   
 
 .visual-refresh {
         .bg__960e4 {background: var(--bg-base-primary);}
@@ -204,19 +197,6 @@ body {
         #app-mount,
         body {background: transparent !important;}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
