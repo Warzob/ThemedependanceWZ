@@ -18,12 +18,9 @@ body {
     --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
     --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
     --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + var(--border-thickness) * 2);
-    
     --border-hover-transition: 0.2s ease;
-
     --custom-chatbar: separated !important; /* off: default chatbar, aligned: chatbar aligned with the user panel, separated: chatbar separated from chat */
     --chatbar-height: 56px !important; /* height of the chatbar (52px by default, 47px recommended for aligned, 56px recommended for separated) */
-        
     --label-color: var(--text-muted);
     --label-hover-color: var(--brand-360);
     --label-font-weight: 500;
@@ -35,9 +32,7 @@ body {
 /* background-image.css */
     --background-image-url: url('');
 
-
 /* dms-button.css */
-
     --dms-icon-svg-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
     --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
     --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
@@ -46,12 +41,9 @@ body {
     --dms-background-image-size: cover; /* size of the background image (css background-size property) */
     --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
 
-
 /* chatbar.css */
-
     --chatbar-height: 47px; /* height of the chatbar (52px by default, 47px to align it with the user panel) */
     --chatbar-padding: 8px; /* padding of the chatbar */
-
     --custom-channel-textarea-text-area-height: var(--chatbar-height);
 
 /* top-bar.css */
