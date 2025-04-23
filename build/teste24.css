@@ -8,6 +8,9 @@ body {
 /* font, change to '' for default discord font */
     --font: 'figtree';
     --code-font: '';
+    --font-primary: var(--font), 'gg sans';
+    --font-display: var(--font), 'gg sans';
+    --font-code: var(--code-font), 'gg mono';
     
 /* sizes */
     --gap: 12px; /* spacing between panels */
@@ -23,15 +26,43 @@ body {
     --label-color: var(--text-muted);
     --label-hover-color: var(--brand-360);
     --label-font-weight: 500;
+    
+ /* animations.css */
+    --list-item-transition: 0.2s ease; /* transition for list items */
+    --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
 
+/* background-image.css */
+    --background-image-url: url('');
+
+
+/* dms-button.css */
+
+    --dms-icon-svg-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
+    --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
+    --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
+    --dms-background-image-url: url(''); /* url of the background image */
+    --dms-background-image-size: cover; /* size of the background image (css background-size property) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
+
+
+/* chatbar.css */
+
+    --chatbar-height: 47px; /* height of the chatbar (52px by default, 47px to align it with the user panel) */
+    --chatbar-padding: 8px; /* padding of the chatbar */
+
+    --custom-channel-textarea-text-area-height: var(--chatbar-height);
+
+/* top-bar.css */
+    --top-bar-height: 32px;
+    --custom-app-top-bar-height: var(--top-bar-height);
+
+/* window-controls.css */
+    --window-control-size: 14px;
 
 }
 
-.visual-refresh {
-    .bg__960e4 {
-        background: var(--bg-base-primary);
-    }
-}
+.visual-refresh {.bg__960e4 {background: var(--bg-base-primary);}}
 
 /* ascii.css */
 @property --ascii-titles {
@@ -834,11 +865,8 @@ body {
     }
 }
 
-body {
-    --font-primary: var(--font), 'gg sans';
-    --font-display: var(--font), 'gg sans';
-    --font-code: var(--code-font), 'gg mono';
-}
+
+
 
 [class*='scroll'] {
     will-change: scroll-position;
@@ -847,11 +875,7 @@ body {
     display: none;
 }
 
-/* animations.css */
-body {
-    --list-item-transition: 0.2s ease; /* transition for list items */
-    --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
-}
+
 
 @property --animations {
     syntax: 'off | on';
@@ -892,10 +916,7 @@ body {
     }
 }
 
-/* background-image.css */
-body {
-    --background-image-url: url('');
-}
+
 
 @property --background-image {
     syntax: 'off | on';
@@ -911,13 +932,7 @@ body {
     }
 }
 
-/* chatbar.css */
-body {
-    --chatbar-height: 47px; /* height of the chatbar (52px by default, 47px to align it with the user panel) */
-    --chatbar-padding: 8px; /* padding of the chatbar */
 
-    --custom-channel-textarea-text-area-height: var(--chatbar-height);
-}
 
 @property --custom-chatbar {
     syntax: 'off | aligned | separated';
@@ -1707,16 +1722,7 @@ body {
     }
 }
 
-/* dms-button.css */
-body {
-    --dms-icon-svg-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
-    --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
-    --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
-    --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
-    --dms-background-image-url: url(''); /* url of the background image */
-    --dms-background-image-size: cover; /* size of the background image (css background-size property) */
-    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
-}
+
 
 @property --custom-dms-icon {
     syntax: 'off | hide | custom';
@@ -1795,11 +1801,7 @@ body {
     }
 }
 
-/* top-bar.css */
-body {
-    --top-bar-height: 32px;
-    --custom-app-top-bar-height: var(--top-bar-height);
-}
+
 
 @property --modify-top-bar-buttons {
     syntax: 'off | hide | serverlist | titlebar';
@@ -2077,10 +2079,7 @@ body {
     }
 }
 
-/* window-controls.css */
-body {
-    --window-control-size: 14px;
-}
+
 
 @property --custom-window-controls {
     syntax: 'off | on';
