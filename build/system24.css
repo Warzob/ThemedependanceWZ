@@ -232,7 +232,7 @@ body {
 @property --ascii-loader {
     syntax: 'off | matrix | cats ';
     inherits: false;
-    initial-value: matrix;
+    initial-value: cats;
 }
     @container body style(--ascii-loader: matrix) {
         .content_a2f514 {display: flex;flex-direction: column;align-items: center;gap: 20px;}
@@ -254,17 +254,12 @@ body {
         @keyframes textShine {0% {background-position: 0% 50%;}50% {background-position: 100% 50%;}50.0001% {background-position: -100%, 50%;}100% {background-position: 0% 50%;}}
     }
 
-
-
     @container body style(--ascii-loader: cats) {
         .content_a2f514 {display: flex;flex-direction: column;align-items: center;gap: 32px;position: static;}
         .content_a2f514 > .spinner_a2f514 {display: none;}
         .content_a2f514::before {display: block;content: url('https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/assets/cats.gif');}
         .text_a2f514 {position: static;}
     }
-
-
-
 
 
     /* colors.css */
