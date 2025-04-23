@@ -68,6 +68,7 @@ body {
     container-name: root;
     --custom-guild-list-padding: 12px;
     --panel-backdrop-filter: none;
+
     --showdiscover: none;
     --showplaying: none;
     --showNitroButton: none;
@@ -106,9 +107,9 @@ body {
         }
 
         @property --ascii-loader {
-            syntax: 'off | system24 | cats';
+            syntax: 'off | system24 | matrix24 | cats';
             inherits: false;
-            initial-value: system24;
+            initial-value: matrix24;
         }
 
         @container body style(--ascii-loader: system24) {
@@ -136,6 +137,30 @@ body {
             @keyframes textShine {0% {background-position: 0% 50%;}50% {background-position: 100% 50%;}50.0001% {background-position: -100%, 50%;}100% {background-position: 0% 50%;}}
         }
 
+        @container body style(--ascii-loader: matrix24) {
+            .content_a2f514 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .content_a2f514 > .spinner_a2f514 {display: none;}
+            .content_a2f514::before {
+                display: block;
+                content: ' ███▄ ▄███▓ ▄▄▄     ▄▄▄█████▓ ██▀███   ██▓▒██   ██▒\A   ▓██▒▀█▀ ██▒▒████▄   ▓  ██▒ ▓▒▓██ ▒ ██▒▓██▒▒▒ █ █ ▒░\A   ▓██    ▓██░▒██  ▀█▄ ▒ ▓██░ ▒░▓██ ░▄█ ▒▒██▒░░  █   ░\A   ▒██    ▒██ ░██▄▄▄▄██░ ▓██▓ ░ ▒██▀▀█▄  ░██░ ░ █ █ ▒\A    ▒██▒   ░██▒ ▓█   ▓██▒ ▒██▒ ░ ░██▓ ▒██▒░██░▒██▒ ▒██▒\A   ░ ▒░   ░  ░ ▒▒   ▓▒█░ ▒ ░░   ░ ▒▓ ░▒▓░░▓  ▒▒ ░ ░▓ ░\A   ░  ░      ░  ▒   ▒▒ ░   ░      ░▒ ░ ▒░ ▒ ░░░   ░▒ ░\A   ░      ░     ░   ▒    ░        ░░   ░  ▒ ░ ░    ░\A     ░         ░  ░           ░      ░   ░    ░\A     ';
+                font-size: 18px;
+                font-family: monospace;
+                white-space: pre;
+                line-height: 1.2;
+                background: linear-gradient(to right, var(--brand-360) 0%, var(--background-accent) 25%, var(--background-accent) 75%, var(--brand-360) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-size: 200% auto;
+                animation: textShine 1.5s linear infinite reverse;
+            }
+            .text_a2f514 {position: static;}
+            @keyframes textShine {0% {background-position: 0% 50%;}50% {background-position: 100% 50%;}50.0001% {background-position: -100%, 50%;}100% {background-position: 0% 50%;}}
+        }
         @container body style(--ascii-loader: cats) {
             .content_a2f514 {display: flex;flex-direction: column;align-items: center;gap: 32px;position: static;}
             .content_a2f514 > .spinner_a2f514 {display: none;}
@@ -1066,18 +1091,24 @@ body {
 
             /* make server list inner scroll */
                 .stack_dbd263 {overflow: hidden scroll;scrollbar-width: none;}
+
             /* create space for inbox button */
                 .tutorialContainer__1f388 {margin-bottom: 48px;}
+
             /* move inbox button */
                 .recentsIcon_c99c29 {position: fixed;width: 40px;height: 40px;top: calc(var(--custom-app-top-bar-height) + 1px + var(--custom-guild-list-padding) + 48px);left: calc(var(--gap) + 1px + var(--custom-guild-list-padding));}
+
             /* style inbox button */
                 .recentsIcon_c99c29 .button__85643 {width: 100%;height: 100%;background-color: var(--background-surface-higher);border-radius: var(--radius-md);transition: background-color 0.15s ease-out;&:hover {background-color: var(--bg-brand);.icon__9293f {color: var(--white);}}}
                 .recentsIcon_c99c29 .svg__2338f {transition: color 0.15s ease-out;width: 24px;height: 24px;}
+
             /* shift inbox popup panel into view */
                 .recentMentionsPopout__95796 {transform: translateX(100%);}
+
             /* fix settings animation transform */
                 .layer__960e4.baseLayer__960e4 {transform: none !important;}
                 .layers__960e4 > .layer__960e4.animating__960e4 {will-change: opacity;}
+
             /* unread icon */
                 .recentsIcon_c99c29 .iconBadge__9293f {--custom-icon-offset: 8px;width: 10px;height: 10px;transition: background 0.15s ease-out;}
                 .recentsIcon_c99c29:hover .iconBadge__9293f {background: var(--white);}
@@ -1191,8 +1222,7 @@ body {
 
 
 
-
-/*Delete //adons  */
+        /*Delete //adons  */
 
     .visual-refresh {
         div[class^=channelAppLauncher_] {display:  var(--showplaying) !important;}
@@ -1212,4 +1242,3 @@ body {
     [class*=search]:not([class*=open]) [class^='iconContainer'] {transform: scale(1.4);}
     [class*=search]:not([class*=open]) [class^='icon_fea832']{color: var(--interactive-normal);}
     [class*=search]:not([class*=open]):hover [class^='icon'] {color: var(--interactive-active);}
-
