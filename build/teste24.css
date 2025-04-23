@@ -1221,7 +1221,7 @@ body {
         button:has([d^=' M-7,10 C-8' i]) { display: var(--showNitroButton); } /* Hide Gift Button */
         .container__4bbc6 { display: none; }
         .title_c38106 { display: none; }
-        .icon__2ea32 {color: oklch(76% 0.1 215) !important; /* Vert pour les écouteurs */} /* Colorer les icônes des salons vocaux (écouteurs) */  
+        .icon__2ea32 {color: oklch(0.5 0.1599 143.98) !important; /* Vert pour les écouteurs */} /* Colorer les icônes des salons vocaux (écouteurs) */  
     }
 
 
