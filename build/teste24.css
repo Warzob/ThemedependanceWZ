@@ -3,8 +3,28 @@
 @import url('https://fonts.cdnfonts.com/css/asciid');
 
 body {
+    container-name: body;
+    
+/* font, change to '' for default discord font */
+    --font: 'figtree';
+    --code-font: '';
+    
+/* sizes */
+    --gap: 12px; /* spacing between panels */
+    --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
+    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+    --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + var(--border-thickness) * 2);
+    
+    --border-hover-transition: 0.2s ease;
+
     --custom-chatbar: separated !important; /* off: default chatbar, aligned: chatbar aligned with the user panel, separated: chatbar separated from chat */
     --chatbar-height: 56px !important; /* height of the chatbar (52px by default, 47px recommended for aligned, 56px recommended for separated) */
+        
+    --label-color: var(--text-muted);
+    --label-hover-color: var(--brand-360);
+    --label-font-weight: 500;
+
+
 }
 
 .visual-refresh {
@@ -109,12 +129,6 @@ body {
     }
 }
 
-/* panel-labels.css */
-body {
-    --label-color: var(--text-muted);
-    --label-hover-color: var(--brand-360);
-    --label-font-weight: 500;
-}
 
 @property --panel-labels {
     syntax: 'off | on';
@@ -397,7 +411,6 @@ body {
 }
 
 
-
 /* main.css */
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -409,21 +422,7 @@ body {
     --border-hover: var(--border-subtle);
 }
 
-body {
-    container-name: body;
 
-    /* font, change to '' for default discord font */
-    --font: 'figtree';
-    --code-font: '';
-
-    /* sizes */
-    --gap: 12px; /* spacing between panels */
-    --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
-    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
-    --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + var(--border-thickness) * 2);
-
-    --border-hover-transition: 0.2s ease;
-}
 
 .visual-refresh {
     /* panel separation */
@@ -2140,4 +2139,3 @@ body {
         }
     }
 }
-
