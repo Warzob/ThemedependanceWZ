@@ -26,6 +26,9 @@ body {
         --showNitroButton:none;
         --radialstatut:none;
 
+        --custom-guild-list-padding: 12px;
+        --panel-backdrop-filter: none;
+
      /* ========== Animations.css ========== */ 
         --list-item-transition: 0.2s ease; /* transition for list items */
         --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
@@ -243,7 +246,6 @@ body {
         }
     }
 
-
 /* ========== Background-image.css ========== */
 @property --background-image {
     syntax: 'off | on';
@@ -251,7 +253,6 @@ body {
     initial-value: off;
 }
     @container body style(--background-image: on) {.visual-refresh .bg__960e4 {background: var(--background-image-url);background-size: cover;background-position: center;}}
-
 
 /* ========== Chatbar.css ========== */
 @property --custom-chatbar {
@@ -299,11 +300,6 @@ body {
 
         container-name: root;
 
-        --showplaying: none;
-        --showNitroButton:none;
-
-        --custom-guild-list-padding: 12px;
-        --panel-backdrop-filter: none;
 
     /* ========== Text Colors ========== */
     --text-0: hsl(220, 15%, 10%); /* text on colored elements */
@@ -350,7 +346,6 @@ body {
 
     /* ========== Base Colors ========== */
     --white: oklch(1 0 none);
-
     --red-1: oklch(76% 0.12 0);
     --red-2: oklch(70% 0.12 0);
     --red-3: oklch(64% 0.12 0);
