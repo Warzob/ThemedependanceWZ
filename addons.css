@@ -1,0 +1,15 @@
+/* ========== Delete // Addons.css ========== */
+.visual-refresh {
+    div[class^=channelAppLauncher_] {display:  var(--showplaying) !important;}
+    button:has([d^=' M-7,10 C-8' i]) { display: var(--showNitroButton); } /* Hide Gift Button */
+    .container__4bbc6 { display: none; }
+    .icon__2ea32 {color: oklch(76% 0.1 215) !important; /* Vert pour les écouteurs */} /* Colorer les icônes des salons vocaux (écouteurs) */  
+}
+
+/* ========== Search Bar.css ========== */
+[class*=search]:not([class*=open]) > [class^=searchBar] {width: 22px;margin-top: 6px;margin-right: 8px;background: transparent;border-width: 0px;}
+[class*=searchBarComponent]{background: transparent;}
+[class*=search]:not([class*=open]) [class^='iconLayout'] {cursor: pointer;}
+[class*=search]:not([class*=open]) [class^='iconContainer'] {transform: scale(1.4);}
+[class*=search]:not([class*=open]) [class^='icon_fea832']{color: var(--interactive-normal);}
+[class*=search]:not([class*=open]):hover [class^='icon'] {color: var(--interactive-active);}
