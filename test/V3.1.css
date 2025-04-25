@@ -306,7 +306,7 @@ body {
         --panel-backdrop-filter: none;
 
     /* ========== Text Colors ========== */
-    --text-0: var(--bg-4); /* text on colored elements */
+    --text-0: hsl(220, 15%, 10%); /* text on colored elements */
     --text-1: hsl(220, 45%, 95%); /* other normally white text */
     --text-2: hsl(220, 25%, 70%); /* headings and important text */
     --text-3: hsl(220, 20%, 60%); /* normal text */
@@ -324,23 +324,23 @@ body {
     --message-hover: hsla(230, 0%, 0%, 0.1); /* messages when hovered */
 
     /* ========== Accent Colors ========== */
-    --accent-1: var(--blue-1); /* links and other accent text */
-    --accent-2: var(--blue-2); /* small accent elements */
-    --accent-3: var(--blue-3); /* accent buttons */
-    --accent-4: var(--blue-4); /* accent buttons when hovered */
-    --accent-5: var(--blue-5); /* accent buttons when clicked */
-    --accent-new: var(--blue-2); /* stuff that's normally red like mute/deafen buttons */
-    --mention: linear-gradient(to right, color-mix(in hsl, var(--blue-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
-    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--blue-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
-    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
-    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
+    --accent-1: oklch(76% 0.1 215); /* links and other accent text */
+    --accent-2: oklch(70% 0.1 215); /* small accent elements */
+    --accent-3: oklch(64% 0.1 215); /* accent buttons */
+    --accent-4: oklch(58% 0.1 215); /* accent buttons when hovered */
+    --accent-5: oklch(52% 0.1 215); /* accent buttons when clicked */
+    --accent-new: oklch(70% 0.1 215); /* stuff that's normally red like mute/deafen buttons */
+    --mention: linear-gradient(to right, color-mix(in hsl, oklch(70% 0.1 215), transparent 90%) 40%, transparent); /* background of messages that mention you */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, oklch(70% 0.1 215), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
+    --reply: linear-gradient(to right, color-mix(in hsl, hsl(220, 20%, 60%), transparent 90%) 40%, transparent); /* background of messages that reply to you */
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, hsl(220, 20%, 60%), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
 
     /* ========== Status Indicator Colors ========== */
-    --online: var(--green-2); /* change to #43a25a for default */
-    --dnd: var(--red-2); /* change to #d83a42 for default */
-    --idle: var(--yellow-2); /* change to #ca9654 for default */
-    --streaming: var(--purple-2); /* change to ##9147ff for default */
-    --offline: var(--text-4); /* change to #83838b for default offline color */
+    --online: oklch(70% 0.11 170); /* change to #43a25a for default */
+    --dnd: oklch(70% 0.12 0); /* change to #d83a42 for default */
+    --idle: oklch(74% 0.11 90); /* change to #ca9654 for default */
+    --streaming: oklch(70% 0.11 310); /* change to ##9147ff for default */
+    --offline: hsl(220, 15%, 40%); /* change to #83838b for default offline color */
 
     /* ========== Border Colors ========== */
     --border-light: rgb(15, 213, 216, 0.7); /* light border color */
@@ -389,7 +389,6 @@ body {
         --activity-card-background: red;
         --alert-bg: red;
         --autocomplete-bg: var(--bg-3);
-
 
         --background-accent: var(--bg-2);
         --background-floating: var(--bg-3);
@@ -747,12 +746,11 @@ body {
         .radioBar__001a7[style='--radio-bar-accent-color: var(--red-400); padding: 10px;'] {--radio-bar-accent-color: var(--red-2) !important;}
         #vc-spotify-player {--vc-spotify-green: var(--accent-2);}
         .vcd-screen-picker-option-radio[data-checked='true'] .defaultColor__4bd52 {color: var(--text-0);}
+
+        ::selection,
+        .highlight {background: var(--accent-3);color: var(--text-0);}
     }
-
-    ::selection,
-    .highlight {background: var(--accent-3);color: var(--text-0);}
 }
-
 
 /* ========== Dms-button.css ========== */
 @property --custom-dms-icon {
@@ -844,7 +842,6 @@ body {
         }
     }
 
-
 /* ========== top-bar-title-position.css ========== */    
 @property --top-bar-title-position {
     syntax: 'off | hide | left';
@@ -853,7 +850,6 @@ body {
 }
     @container body style(--top-bar-title-position: hide) {.visual-refresh {.title__85643 {display: none;}}}
     @container body style(--top-bar-title-position: left) {.visual-refresh {.title_c38106 {padding-left: var(--gap);justify-content: flex-start;}.title__85643 {gap: 4px;}}}
-
    
 /* ========== subtle-top-bar-title.css ========== */        
 @property --subtle-top-bar-title {
@@ -862,7 +858,6 @@ body {
     initial-value: off;
 }
     @container body style(--subtle-top-bar-title: on) {.visual-refresh {.title__85643 .icon_f34534,.title__85643 > svg {display: none;}.title__85643 .text-sm\/medium_cf4812 {line-height: 90%;font-weight: 700;color: var(--text-muted);}}}
-
 
 /* ========== transparency-blur.css ========== */   
 @property --panel-blur {
@@ -886,7 +881,6 @@ body {
         }
     }
 
-
 /* ========== transparency-tweaks.css ========== */     
 @property --transparency-tweaks {
     syntax: 'off | on';
@@ -894,7 +888,6 @@ body {
     initial-value: off;
 }
     @container body style(--transparency-tweaks: on) {.visual-refresh {.formWithLoadedChatInput_f75fb0:before,.children__9293f:after {display: none;}}}
-
 
 /* ========== remove-bg-layer.css ========== */  
 @property --remove-bg-layer {
@@ -904,7 +897,6 @@ body {
 }
     @container body style(--remove-bg-layer: on) {.bg__960e4 {background: transparent !important;}}
 
-
 /* ========== user-panel.css ========== */
 @property --small-user-panel {
     syntax: 'off | on';
@@ -912,7 +904,6 @@ body {
     initial-value: off;
 }
     @container body style(--small-user-panel: on) {.visual-refresh {.panels_c48ade /* user panel */ {right: 0;left: unset;width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width));}.guilds_c48ade /* server list */ {margin-bottom: 0;}}}
-
 
 /* ========== custom-window-controls.css ========== */
 @property --custom-window-controls {
@@ -989,75 +980,6 @@ body {
         @keyframes textShine {0% {background-position: 0% 50%;}50% {background-position: 100% 50%;}50.0001% {background-position: -100%, 50%;}100% {background-position: 0% 50%;}}
     }
     @container body style(--ascii-loader: cats) {.content_a2f514 {display: flex;flex-direction: column;align-items: center;gap: 32px;position: static;}.content_a2f514 > .spinner_a2f514 {display: none;}.content_a2f514::before {display: block;content: url('https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/assets/cats.gif');}.text_a2f514 {position: static;}}
-
-
-
-/* ==========  addons.css ========== */
-    property --addons {
-        syntax: 'off | on';
-        inherits: false;
-        initial-value: on;
-    }
-        @container body style(--addons: on) {
-            .visual-refresh {
-            div[class^=channelAppLauncher_] {display:  var(--showplaying) !important;}
-            button:has([d^=' M-7,10 C-8' i]) { display: var(--showNitroButton); } /* Hide Gift Button */
-            .container__4bbc6 { display: none; }
-            .title_c38106 { display: none; }  
-            [class*=emojiButton] [class*=spriteColored]{background: var(--customEmojiIconURL) center/contain no-repeat;}
-            [class*=emojiButton] [class*=spriteGreyscale]{mask: var(--customEmojiIconMask) center/contain no-repeat;}
-
-            /* ==========  Search Bar.css ========== */
-                [class*=search]:not([class*=open]) > [class^=searchBar] {width: 22px;margin-top: 6px;margin-right: 8px;background: transparent;border-width: 0px;}
-                [class*=searchBarComponent]{background: transparent;}
-                [class*=search]:not([class*=open]) [class^='iconLayout'] {cursor: pointer;}
-                [class*=search]:not([class*=open]) [class^='iconContainer'] {transform: scale(1.4);}
-                [class*=search]:not([class*=open]) [class^='icon_fea832']{color: var(--interactive-normal);}
-                [class*=search]:not([class*=open]):hover [class^='icon'] {color: var(--interactive-active);}
-
-            /* ==========   AUTO COMPLETE EMOJI ANIMATION.css ========== */
-                div[class*=autocompleteInner] [class*=clickable] [class*=base]:hover{transition: all 0s;transform: scale(1.02);}
-                div[class*=autocompleteInner] [class*=base]{ transition: all 0.3s;}
-
-            /* ==========    Move down search bar / other icons.css ========== */
-                [class*="toolbar__9293f"] {position: relative;left: 90px;}
-                .children__9293f::after {display: none;}
-        }
-    }
-
-
-/* ==========  radialstatut.css ========== */
-property --radialstatut {
-    syntax: 'off | on';
-    inherits: false;
-    initial-value: off;
-}
-        @container body style(--radialstatut: on) {
-            :root {
-                    /* ========== Spacing ========== */
-                        --rs-small-spacing: 2px; /* Gap between avatar and status for members list/dms | MUST end in px */
-                        --rs-medium-spacing: 3px; /* Gap between avatar and status for User popout | MUST end in px */
-                        --rs-large-spacing: 4px; /* Gap between avatar and status for User profiles | MUST end in px */
-                    /* ========== Widths ========== */
-                        --rs-small-width: 2px; /* Thickness of status border for members list/dms | MUST end in px */
-                        --rs-medium-width: 3px; /* Thickness of status border for User popout | MUST end in px */
-                        --rs-large-width: 4px; /* Thickness of status border for User profile | MUST end in px */
-                    /* ========== Shape ========== */
-                        --rs-avatar-shape: 50%; /* 50% for round - 0% for square */
-                    /* ========== Colours ========== */
-                        --rs-online-color: #43b581; /* Colour for online status */
-                        --rs-idle-color: #faa61a; /* Colour for idle status */
-                        --rs-dnd-color: #f04747; /* Colour for dnd status */
-                        --rs-offline-color: #636b75; /* Colour for offline status */
-                        --rs-streaming-color: #643da7; /* Colour for streaming status */
-                        --rs-invisible-color: #747f8d; /* Colour for invisible status - Note: this will only show for your own invisibility */
-                        --rs-self-speaking-color: #57d39b; /* Colour for speaking ring in the bottom left while in a voice chat/call */
-                        --rs-phone-color: var(--rs-online-color); /* Colour of the ring & phone icon  */
-                    /* ========== Others   ========== */
-                        --rs-phone-visible: block; /* Visibility of the phone icon next to a users avatar. | block = visible | none = hidden */ 
-    }
-}
-
 
 
 /* ========== Lecteur Spotify.css ========== */
