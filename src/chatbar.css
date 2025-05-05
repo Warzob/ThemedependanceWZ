@@ -15,7 +15,7 @@ body {
     .visual-refresh {
         .form_f75fb0 {
             margin: 0 var(--chatbar-padding) var(--chatbar-padding) var(--chatbar-padding);
-            padding: 0;
+            padding: 0 !important;
             --chatbar-border-color: var(--border-faint);
         }
         .channelTextArea_f75fb0 {
@@ -36,12 +36,8 @@ body {
             box-sizing: border-box;
         }
         .stackedBars__74017,
-        .threadSuggestionBar__841c8 {
-            border-color: var(--chatbar-border-color) !important;
-        }
-        .stackedBars__74017 {
-            background: none !important;
-        }
+        .threadSuggestionBar__841c8 {border-color: var(--chatbar-border-color) !important;}
+        .stackedBars__74017 {background: none !important;}
         .form_f75fb0:has(.base_b88801) {
             .channelTextArea_f75fb0,
             .wrapper__44df5 {
@@ -136,6 +132,19 @@ body {
         }
         .stackedBars__74017 {
             background: none !important;
+        }
+        .wrapper__44df5 {
+            margin: var(--gap) 0 0 0;
+            height: var(--chatbar-height);
+            padding: 0;
+            border-radius: var(--radius-lg);
+            border: var(--border-thickness) solid var(--border-subtle);
+            backdrop-filter: var(--panel-backdrop-filter);
+            transition: border-color var(--border-hover-transition);
+
+            &:hover {
+                border-color: var(--border-hover);
+            }
         }
     }
 }
